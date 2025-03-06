@@ -390,7 +390,7 @@ export const messages = defineMessages({
   },
   activeUsers: {
     id: 'message.active-users',
-    defaultMessage: '{x} current {x, plural, one {visitor} other {visitors}}',
+    defaultMessage: '{x} active {x, plural, one {user} other {users}} in last 30 minutes',
   },
   teamNotFound: {
     id: 'message.team-not-found',

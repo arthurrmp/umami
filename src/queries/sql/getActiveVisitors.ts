@@ -20,7 +20,7 @@ async function relationalQuery(websiteId: string) {
     where website_id = {{websiteId::uuid}}
     and created_at >= {{startDate}}
     `,
-    { websiteId, startDate: subMinutes(new Date(), 5) },
+    { websiteId, startDate: subMinutes(new Date(), 30) },
   );
 
   return result[0] ?? null;
@@ -37,7 +37,7 @@ async function clickhouseQuery(websiteId: string): Promise<{ x: number }> {
     where website_id = {websiteId:UUID}
       and created_at >= {startDate:DateTime64}
     `,
-    { websiteId, startDate: subMinutes(new Date(), 5) },
+    { websiteId, startDate: subMinutes(new Date(), 30) },
   );
 
   return result[0] ?? null;
