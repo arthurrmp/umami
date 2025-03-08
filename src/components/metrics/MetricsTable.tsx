@@ -86,6 +86,8 @@ export function MetricsTable({
 
       items = percentFilter(items);
 
+      items.sort((a, b) => b.y - a.y);
+
       return items;
     }
     return [];
